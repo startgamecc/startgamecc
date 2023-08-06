@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 100" style="enable-background:new 0 0 800 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M120,10h10V0h50v20h-40v20h30v10h10v40h-10v10h-50V80h40V60h-30V50h-10V10z"/>
+		<path class="st0" d="M190,0h60v20h-20v80h-20V20h-20V0z"/>
+		<path class="st0" d="M260,10h10V0h40v10h10v90h-20V60h-20v40h-20V10z M280,20v20h20V20H280z"/>
+		<path class="st0" d="M329.99,0h50v10h10v40h-10v10h-10v10h10V80h10v20h-20V90h-10V80H350v20h-20V0z M350,40h20V20h-20V40z"/>
+		<path class="st0" d="M400,0h60v20h-20v80h-20V20h-20V0z"/>
+	</g>
+	<g>
+		<path class="st0" d="M520,10h10V0h50v20h-40V80h20V60h-10V40H580v50h-10v10h-40V90h-10V10z"/>
+		<path class="st0" d="M590,10h10V0h40v10h10v90h-20V60h-20v40h-20V10z M610.01,20v20h20V20H610.01z"/>
+		<path class="st0" d="M660,0h20v20H690V30h10V20h10V0h20v100h-20V50h-10v20h-10V50H680v50h-20V0z"/>
+		<path class="st0" d="M740,0h60v20h-40v20h30v20h-30v20h40v20h-60V0z"/>
+	</g>
+	<polygon class="st0" points="50,40 50,30 40,30 40,20 20,20 20,10 0,10 0,20 0,30 0,40 0,60 0,70 0,80 0,90 20,90 20,80 40,80 
+		40,70 50,70 50,60 70,60 70,40 	"/>
+</g>
+</svg>
