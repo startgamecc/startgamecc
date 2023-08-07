@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 800 100" style="enable-background:new 0 0 800 100;" xml:space="preserve">
+	 viewBox="0 0 69 10" style="enable-background:new 0 0 69 10;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 </style>
-<g>
+<g id="logo">
 	<g>
-		<path class="st0" d="M120,10h10V0h50v20h-40v20h30v10h10v40h-10v10h-50V80h40V60h-30V50h-10V10z"/>
-		<path class="st0" d="M190,0h60v20h-20v80h-20V20h-20V0z"/>
-		<path class="st0" d="M260,10h10V0h40v10h10v90h-20V60h-20v40h-20V10z M280,20v20h20V20H280z"/>
-		<path class="st0" d="M329.99,0h50v10h10v40h-10v10h-10v10h10V80h10v20h-20V90h-10V80H350v20h-20V0z M350,40h20V20h-20V40z"/>
-		<path class="st0" d="M400,0h60v20h-20v80h-20V20h-20V0z"/>
+		<path class="st0" d="M41,1h1V0h5v2h-4v6h2V6h-1V4h3v5h-1v1h-4V9h-1V1z"/>
+		<path class="st0" d="M48,1h1V0h4v1h1v9h-2V6h-2v4h-2V1z M50,2v2h2V2H50z"/>
+		<path class="st0" d="M55,0h2v2h1v1h1V2h1V0h2v10h-2V5h-1v2h-1V5h-1v5h-2V0z"/>
+		<path class="st0" d="M63,0h6v2h-4v2h3v2h-3v2h4v2h-6V0z"/>
 	</g>
 	<g>
-		<path class="st0" d="M520,10h10V0h50v20h-40V80h20V60h-10V40H580v50h-10v10h-40V90h-10V10z"/>
-		<path class="st0" d="M590,10h10V0h40v10h10v90h-20V60h-20v40h-20V10z M610.01,20v20h20V20H610.01z"/>
-		<path class="st0" d="M660,0h20v20H690V30h10V20h10V0h20v100h-20V50h-10v20h-10V50H680v50h-20V0z"/>
-		<path class="st0" d="M740,0h60v20h-40v20h30v20h-30v20h40v20h-60V0z"/>
+		<path class="st0" d="M0,1h1V0h5v2H2v2h3v1h1v4H5v1H0V8h4V6H1V5H0V1z"/>
+		<path class="st0" d="M7,0h6v2h-2v8H9V2H7V0z"/>
+		<path class="st0" d="M22,0h5v1h1v4h-1v1h-1v1h1v1h1v2h-2V9h-1V8h-1v2h-2V0z M24,4h2V2h-2V4z"/>
+		<path class="st0" d="M29,0h6v2h-2v8h-2V2h-2V0z"/>
+		<polygon class="st0" points="19,4 19,3 18,3 18,2 16,2 16,1 14,1 14,2 14,3 14,4 14,6 14,7 14,8 14,9 16,9 16,8 18,8 18,7 19,7 
+			19,6 21,6 21,4 		"/>
 	</g>
-	<polygon class="st0" points="50,40 50,30 40,30 40,20 20,20 20,10 0,10 0,20 0,30 0,40 0,60 0,70 0,80 0,90 20,90 20,80 40,80 
-		40,70 50,70 50,60 70,60 70,40 	"/>
 </g>
 </svg>
