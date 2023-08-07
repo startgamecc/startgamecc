@@ -2,70 +2,66 @@
 <html>
 <head>
 	<title>START GAME</title>
-	<link rel="icon" type="image/x-icon" href="favicon.svg">
+	<link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGcgaWQ9ImZhdmljb24iPgoJPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+Cgk8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjkuNSw3IDkuNSw2IDguNSw2IDguNSw1IDYuNSw1IDYuNSw0IDQuNSw0IDQuNSw1IDQuNSw2IDQuNSw3IDQuNSw5IDQuNSwxMCA0LjUsMTEgNC41LDEyIDYuNSwxMiAKCQk2LjUsMTEgOC41LDExIDguNSwxMCA5LjUsMTAgOS41LDkgMTEuNSw5IDExLjUsNyAJIi8+CjwvZz4KPC9zdmc+Cg==">
 	<style>
-		@font-face {
-			font-family: "Pixel";
-			src: url("mini_pixel-7.ttf");
+		:root {
+			--width: 90vmin;
+			--privacy: 10vmin;
+			--social: 4;
+			--spc: 5vmin;
+			--p1: calc(var(--width) / 162);
+			--p2: calc(var(--width) / (16 * var(--social) + 4 * (var(--social) - 1)));
+			--p3: calc(var(--privacy) / 48 * 2);
 		}
-		* { font-family: "Pixel"; }
-		body {
+		* {
 			margin: 0;
 			padding: 0;
-			background-color: black;
-			color: white;
 		}
-		#main {
+		body {
+			background-color: black;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			gap: 3rem;
-			width: 100%;
 			height: 100vh;
 		}
-		#logo {
-			width: min(100vw - 4rem, 800px);
+		#logo, #mail, #social { width: var(--width); }
+		#logo { margin-bottom: var(--spc); }
+		#mail {
+			padding-bottom: var(--p1);
+			margin-bottom: calc(var(--spc) - var(--p1) * 2.5);
+			border-bottom: calc(var(--p1) * 1.5) solid black;
 		}
-		#info {
+		#mail:hover { border-bottom: calc(var(--p1) * 1.5) solid white; }
+		#social {
 			display: flex;
-			align-items: center;
-			flex-direction: column;
-			gap: 1.5rem;
+			justify-content: space-between;
 		}
-		#info>div {
-			display: flex;
-			gap: .75rem;
-			font-size: 3rem;
+		#social img { width: calc(var(--p2) * 16); }
+		#social a {
+			padding-bottom: var(--p2);
+			border-bottom: var(--p2) solid black;
 		}
-		#gmail, #fb {
-			height: 1.75rem;
-			transform: translateY(.25rem);
-		}
-		a {
-			color: white;
-			text-decoration: none;
-		}
-		a:hover {
-			text-decoration: underline;
-		}
+		#social a:hover { border-bottom: var(--p2) solid white; }
 		#privacy {
 			position: fixed;
-			font-family: sans-serif;
-			font-size: .75rem;
-			bottom: 1rem;
-			right: 1rem;
+			width: var(--privacy);
+			right: 2vmin;
+			bottom: 2vmin;
+			border-bottom: var(--p3) solid black;
 		}
+		#privacy:hover { border-bottom: var(--p3) solid white; }
 	</style>
 </head>
 <body>
-	<div id="main">
-		<img id="logo" src="logo.svg"/>
-		<div id="info">
-			<div><span><img id="gmail" src="gmail.svg"/></span><a href="mailto:startgame.cc@gmail.com">startgame.cc@gmail.com</a></div>
-			<div><span><img id="fb" src="fb.svg"/></span><a href="https://www.facebook.com/startgame.cc">startgame.cc</a></div>
-		</div>
-		<a href="privacy.html" id="privacy">PRIVACY</a>
+	<img id="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2OSAxMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNjkgMTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGcgaWQ9ImxvZ28iPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQxLDFoMVYwaDV2MmgtNHY2aDJWNmgtMVY0aDN2NWgtMXYxaC00VjloLTFWMXoiLz4KCQk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDgsMWgxVjBoNHYxaDF2OWgtMlY2aC0ydjRoLTJWMXogTTUwLDJ2MmgyVjJINTB6Ii8+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTU1LDBoMnYyaDF2MWgxVjJoMVYwaDJ2MTBoLTJWNWgtMXYyaC0xVjVoLTF2NWgtMlYweiIvPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02MywwaDZ2MmgtNHYyaDN2MmgtM3YyaDR2MmgtNlYweiIvPgoJPC9nPgoJPGc+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMWgxVjBoNXYySDJ2MmgzdjFoMXY0SDV2MUgwVjhoNFY2SDFWNUgwVjF6Ii8+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTcsMGg2djJoLTJ2OEg5VjJIN1YweiIvPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMiwwaDV2MWgxdjRoLTF2MWgtMXYxaDF2MWgxdjJoLTJWOWgtMVY4aC0xdjJoLTJWMHogTTI0LDRoMlYyaC0yVjR6Ii8+CgkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI5LDBoNnYyaC0ydjhoLTJWMmgtMlYweiIvPgoJCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTksNCAxOSwzIDE4LDMgMTgsMiAxNiwyIDE2LDEgMTQsMSAxNCwyIDE0LDMgMTQsNCAxNCw2IDE0LDcgMTQsOCAxNCw5IDE2LDkgMTYsOCAxOCw4IDE4LDcgMTksNyAKCQkJMTksNiAyMSw2IDIxLDQgCQkiLz4KCTwvZz4KPC9nPgo8L3N2Zz4K"/>
+	<a id="mail" href="mailto:startgame.cc@gmail.com"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNjIgMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2MiAxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8cGF0aCBpZD0iZ21haWwiIGNsYXNzPSJzdDAiIGQ9Ik0xMywxSDJIMHYxdjl2MWgyaDExaDJ2LTFWMlYxSDEzeiBNMTIsMnYxaC0xdjFoLTF2MUg5djFIOHYxSDdWNkg2VjVINVY0SDRWM0gzVjJIMTJ6IE0yLDExVjRoMXYxCgloMXYxaDF2MWgxdjFoMXYxaDFWOGgxVjdoMVY2aDFWNWgxVjRoMXY3SDJ6Ii8+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTIxLDRoMVYzaDV2MmgtNHYxaDN2MWgxdjNoLTF2MWgtNVY5aDRWOGgtM1Y3aC0xVjR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjgsM2gxVjFoMnYyaDJ2MmgtMnY0aDJ2MmgtM3YtMWgtMVY1aC0xVjN6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzUsM2g0djFoMXY3aC01di0xaC0xVjdoMVY2aDNWNWgtM1YzeiBNMzYsOWgyVjhoLTJWOXoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MSwzaDJ2MWgxVjNoMnYxaDF2MmgtMlY1aC0xdjFoLTF2NWgtMlYzeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ4LDNoMVYxaDJ2MmgydjJoLTJ2NGgydjJoLTN2LTFoLTFWNWgtMVYzeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTU0LDRoMVYzaDV2OGgtMXYxaC00di0yaDNWOWgtM1Y4aC0xVjR6IE01OCw1aC0ydjJoMlY1eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTYyLDNoNHYxaDF2N2gtNXYtMWgtMVY3aDFWNmgzVjVoLTNWM3ogTTYzLDloMlY4aC0yVjl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjgsM2g2djFoMXY3aC0yVjVoLTF2NmgtMVY1aC0xdjZoLTJWM3oiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik03Niw0aDFWM2g0djFoMXY0aC00djFoNHYyaC01di0xaC0xVjR6IE03OCw1djFoMlY1SDc4eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTgzLDloMnYyaC0yVjl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNODcsNGgxVjNoNHYxaDF2MmgtMlY1aC0ydjRoMlY4aDJ2MmgtMXYxaC00di0xaC0xVjR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOTQsNGgxVjNoNHYxaDF2MmgtMlY1aC0ydjRoMlY4aDJ2MmgtMXYxaC00di0xaC0xVjR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTAxLDJoMVYxaDV2MWgxdjVoLTRWNWgyVjNoLTN2Nmg1djJoLTZ2LTFoLTFWMnoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMDksNGgxVjNoNXY4aC0xdjFoLTR2LTJoM1Y5aC0zVjhoLTFWNHogTTExMyw1aC0ydjJoMlY1eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTExNiwzaDZ2MWgxdjdoLTJWNWgtMXY2aC0xVjVoLTF2NmgtMlYzeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyNSwzaDR2MWgxdjdoLTV2LTFoLTFWN2gxVjZoM1Y1aC0zVjN6IE0xMjYsOWgyVjhoLTJWOXoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMzEsMGgydjJoLTJWMHogTTEzMSwzaDJ2OGgtMlYzeiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzNCwxaDJ2MTBoLTJWMXoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMzcsOWgydjJoLTJWOXoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNDEsNGgxVjNoNHYxaDF2MmgtMlY1aC0ydjRoMlY4aDJ2MmgtMXYxaC00di0xaC0xVjR6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTQ4LDRoMVYzaDR2MWgxdjZoLTF2MWgtNHYtMWgtMVY0eiBNMTUwLDloMlY1aC0yVjl6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTU1LDNoNnYxaDF2N2gtMlY1aC0xdjZoLTFWNWgtMXY2aC0yVjN6Ii8+CjwvZz4KPC9zdmc+Cg=="/></a>
+	<div id="social">
+		<a href="https://www.facebook.com/startgame.cc" target="_blank"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPHBhdGggaWQ9ImZiXzJfIiBjbGFzcz0ic3QwIiBkPSJNMTUsMlYxaC0xVjBIMnYxSDF2MUgwdjEyaDF2MWgxdjFoMTJ2LTFoMXYtMWgxVjJIMTV6IE0xMSw2SDl2MmgydjJIOXY1SDd2LTVINVY4aDJWNWgxVjRoM1Y2eiIvPgo8L3N2Zz4K"/></a>
+		<a href="https://www.instagram.com/startgame.cc" target="_blank"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGcgaWQ9ImlnIj4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iNiw5IDcsOSA3LDEwIDksMTAgOSw5IDEwLDkgMTAsNyA5LDcgOSw2IDcsNiA3LDcgNiw3IAkiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTIsNCAxMSw0IDExLDUgMTAsNSAxMCw2IDExLDYgMTEsMTAgMTAsMTAgMTAsMTEgNiwxMSA2LDEwIDUsMTAgNSw2IDYsNiA2LDUgMTAsNSAxMCw0IDExLDQgMTEsMyAKCQk1LDMgNSw0IDQsNCA0LDUgMyw1IDMsMTEgNCwxMSA0LDEyIDUsMTIgNSwxMyAxMSwxMyAxMSwxMiAxMiwxMiAxMiwxMSAxMywxMSAxMyw1IDEyLDUgCSIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE1LDJWMWgtMVYwSDJ2MUgxdjFIMHYxMmgxdjFoMXYxaDEydi0xaDF2LTFoMVYySDE1eiBNMTQsMTJoLTF2MWgtMXYxSDR2LTFIM3YtMUgyVjRoMVYzaDFWMmg4djFoMXYxaDFWMTJ6IgoJCS8+CjwvZz4KPC9zdmc+Cg=="/></a>
+		<a href="https://www.youtube.com/@startgamecc" target="_blank"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGcgaWQ9Inl0Ij4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xNSwyVjFoLTFWMEgydjFIMXYxSDB2MTJoMXYxaDF2MWgxMnYtMWgxdi0xaDFWMkgxNXogTTE0LDExaC0xdjFIM3YtMUgyVjRoMVYzaDEwdjFoMVYxMXoiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iOC41LDcgOC41LDYgNy41LDYgNy41LDUgNi41LDUgNi41LDEwIDcuNSwxMCA3LjUsOSA4LjUsOSA4LjUsOCA5LjUsOCA5LjUsNyAJIi8+CjwvZz4KPC9zdmc+Cg=="/></a>
+		<a href="https://play.google.com/store/apps/dev?id=8597025097068898517" target="_blank"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxNiAxNiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGc+Cgk8cmVjdCB4PSI2IiB5PSI0IiBjbGFzcz0ic3QwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+Cgk8cmVjdCB4PSI1IiB5PSIzIiBjbGFzcz0ic3QwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+Cgk8cmVjdCB4PSI3IiB5PSI1IiBjbGFzcz0ic3QwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+Cgk8cmVjdCB4PSI2IiB5PSIxMCIgY2xhc3M9InN0MCIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPgoJPHJlY3QgeD0iOCIgeT0iNiIgY2xhc3M9InN0MCIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPgoJPHJlY3QgeD0iNSIgeT0iMTEiIGNsYXNzPSJzdDAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz4KCTxyZWN0IHg9IjgiIHk9IjgiIGNsYXNzPSJzdDAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz4KCTxyZWN0IHg9IjciIHk9IjkiIGNsYXNzPSJzdDAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz4KCTxyZWN0IHg9IjkiIHk9IjciIGNsYXNzPSJzdDAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz4KCTxyZWN0IHg9IjEwIiB5PSI4IiBjbGFzcz0ic3QwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTUsMlYxaC0xVjBIMnYxSDF2MUgwdjEyaDF2MWgxdjFoMTJ2LTFoMXYtMWgxVjJIMTV6IE0xNCw4aC0xdjFoLTJ2MWgtMXYxSDh2MUg3djFINkg1di0xSDRWM2gxVjJoMWgxdjFoMXYxCgkJaDJ2MWgxdjFoMnYxaDFWOHoiLz4KCTxyZWN0IHg9IjEwIiB5PSI2IiBjbGFzcz0ic3QwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+CjwvZz4KPC9zdmc+Cg=="/></a>
 	</div>
+	<a id="privacy" href="privacy.html"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0OCAxMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDggMTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMCwwaDV2MWgxdjRINXYxSDJ2NEgwVjB6IE00LDJIMnYyaDJWMnoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik03LDBoNXYxaDF2NGgtMXYxaC0xdjFoMXYxaDF2MmgtMlY5aC0xVjhIOXYySDdWMHogTTksNGgyVjJIOVY0eiIvPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTE0LDBoNnYyaC0ydjZoMnYyaC02VjhoMlYyaC0yVjB6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjEsMGgydjZoMlYwaDJ2NmgtMXYyaC0xdjJoLTJWOGgtMVY2aC0xVjB6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjgsMWgxVjBoNHYxaDF2OWgtMlY2aC0ydjRoLTJWMXogTTMwLDJ2MmgyVjJIMzB6Ii8+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzUsMWgxVjBoNHYxaDF2MmgtMlYyaC0ydjZoMlY3aDJ2MmgtMXYxaC00VjloLTFWMXoiLz4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MiwwaDJ2NGgyVjBoMnY0aC0xdjJoLTF2NGgtMlY2aC0xVjRoLTFWMHoiLz4KPC9nPgo8L3N2Zz4K"/></a>
 </body>
 </html>
